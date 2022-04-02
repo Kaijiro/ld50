@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,15 +7,13 @@ public class ShootingRangeStudy : MonoBehaviour
     private float shoot_left = 1f;
     public Slider shoot_loader;
     public float loading_velocity = 1f;
-    public GameObject catPrefab;
-    public float respawnDelay = 1f;
+
     public GameObject reticle;
 
     // Start is called before the first frame update
     void Start()
     {
         shoot_left = shoot_capacity;
-        Instantiate(catPrefab);
     }
 
     // Update is called once per frame
@@ -29,10 +25,10 @@ public class ShootingRangeStudy : MonoBehaviour
             {
                 // manage shooting capacity
                 shoot_left--;
-                shoot_loader.value = shoot_left/shoot_capacity;
+                this.UpdateShootLoaderDisplay(shoot_left/shoot_capacity);
 
                 // add some fancy stuff to the gun
-                reticle.GetComponent<theHand>().kickAnim();
+                EventSystem.Instance.Shoot();
 
                 // did you hit something ? apply stuff then
                 Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -42,11 +38,7 @@ public class ShootingRangeStudy : MonoBehaviour
                 {
                     Debug.Log("Clicked on " + hit.collider.name);
 
-                    Destroy(hit.collider.gameObject);
-                    if (hit.collider.gameObject.tag == "cat")
-                    {
-                        StartCoroutine(getVengeance());
-                    }
+                    EventSystem.Instance.CatSplashed();
                 }
             } else
             {
@@ -67,17 +59,12 @@ public class ShootingRangeStudy : MonoBehaviour
             //m_Rigidbody.MovePosition(transform.position + m_Input * Time.deltaTime * m_Speed);
         }
 
-        shoot_loader.value = shoot_left / shoot_capacity;
+        this.UpdateShootLoaderDisplay(shoot_left / shoot_capacity);
     }
 
-    // Temp CoRoutine that will respawn Cat Astroph
-    IEnumerator getVengeance()
-    {
-
-        yield return new WaitForSeconds(respawnDelay);
-        // keeping it simple for now : it will always spawn at the same spot.
-        Instantiate(catPrefab);
-
+    private void UpdateShootLoaderDisplay(float shootLeftValue){
+        if(this.shoot_loader != null){
+            this.shoot_loader.value = shootLeftValue;
+        }
     }
-
 }

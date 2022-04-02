@@ -8,6 +8,11 @@ public class CatSpawner : MonoBehaviour
     [Range(0, 100)]
     public float catSpawnChance;
 
+    [Min(0.01f)]
+    public float furryCoefficient;
+
+    private int hitCount;
+
     private GameObject[] precious;
 
     public GameObject debugPrecious;
@@ -24,19 +29,24 @@ public class CatSpawner : MonoBehaviour
         StartCoroutine(DoCheck());
 
         //EventSystem.Instance.OnPreciousSmashed += DespawnCat; // Temporary code to test the Spawner
+        EventSystem.Instance.OnCatSplashed += OnCatSplashed;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void OnCatSplashed(){
+        IncreaseFurry();
+        DespawnCat();
     }
 
-    bool CatShouldSpawn(){
+    private void IncreaseFurry(){
+        Debug.Log("Furry Increased !");
+        this.hitCount++;
+    }
+
+    private bool CatShouldSpawn(){
         return this.catInstance == null && Random.Range(0, 100) <= catSpawnChance;
     }
 
-    void DespawnCat(){
+    private void DespawnCat(){
         Debug.Log("Destroying the cat.");
         Destroy(this.catInstance);
         this.catInstance = null;
@@ -60,10 +70,8 @@ public class CatSpawner : MonoBehaviour
 
                 bool spawnerIsPlacedAtTheRightOfThePrecious = spawnerPosition.x > targetedPrecious.transform.position.x;
 
-                if(spawnerIsPlacedAtTheRightOfThePrecious){
-                    mishchief_little_shit catWalkingBehavior = this.catInstance.GetComponent<mishchief_little_shit>();
-                    catWalkingBehavior.m_Speed = - catWalkingBehavior.m_Speed;
-                }
+                mishchief_little_shit catWalkingBehavior = this.catInstance.GetComponent<mishchief_little_shit>();
+                catWalkingBehavior.m_Speed = (catWalkingBehavior.m_Speed + (this.furryCoefficient * this.hitCount)) * (spawnerIsPlacedAtTheRightOfThePrecious ? -1 : 1);
             }
 
             yield return new WaitForSeconds(1f);
