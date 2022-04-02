@@ -359,8 +359,6 @@ MonoBehaviour:
   shoot_capacity: 1
   shoot_loader: {fileID: 269247658}
   loading_velocity: 1
-  catPrefab: {fileID: 1911613836498726818, guid: f6005cdb9023fb84a92b63041aaf4772, type: 3}
-  respawnDelay: 1
   reticle: {fileID: 301000326}
 --- !u!1 &269247656
 GameObject:

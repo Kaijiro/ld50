@@ -3201,6 +3201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabToSpawn: {fileID: 1911613836498726818, guid: f6005cdb9023fb84a92b63041aaf4772, type: 3}
   catSpawnChance: 38.9
+  furryCoefficient: 0.3
   debugPrecious: {fileID: 0}
 --- !u!1 &1737523013
 GameObject:
@@ -3544,8 +3545,6 @@ MonoBehaviour:
   shoot_capacity: 1
   shoot_loader: {fileID: 607890841}
   loading_velocity: 1
-  catPrefab: {fileID: 1911613836498726818, guid: f6005cdb9023fb84a92b63041aaf4772, type: 3}
-  respawnDelay: 1
   reticle: {fileID: 989244774}
 --- !u!1001 &1855999452
 PrefabInstance:
