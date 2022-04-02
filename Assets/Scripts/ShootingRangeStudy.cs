@@ -11,6 +11,7 @@ public class ShootingRangeStudy : MonoBehaviour
     public float loading_velocity = 1f;
     public GameObject catPrefab;
     public float respawnDelay = 1f;
+    public GameObject reticle;
 
     // Start is called before the first frame update
     void Start()
@@ -26,11 +27,15 @@ public class ShootingRangeStudy : MonoBehaviour
         {
            if( shoot_left >= 1)
             {
+                // manage shooting capacity
                 shoot_left--;
                 shoot_loader.value = shoot_left/shoot_capacity;
 
-                Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                // add some fancy stuff to the gun
+                reticle.GetComponent<theHand>().kickAnim();
 
+                // did you hit something ? apply stuff then
+                Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
 
                 if (hit.collider != null)
@@ -43,13 +48,9 @@ public class ShootingRangeStudy : MonoBehaviour
                         StartCoroutine(getVengeance());
                     }
                 }
-                    
-                else
-                {
-                    Debug.Log("Nothing hit");
-                }
             } else
             {
+                // TODO : add a UI prompt ?
                 Debug.Log("RELOAD");
             }
             
