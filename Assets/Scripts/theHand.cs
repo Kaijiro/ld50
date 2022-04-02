@@ -8,9 +8,12 @@ public class theHand : MonoBehaviour
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
-        mousePosition.x += 1f;
-        mousePosition.y -= 1.8f;
         transform.position = mousePosition;
-  
+           
+    }
+
+    public void kickAnim()
+    {
+        Debug.Log("kickin");
     }
 }
