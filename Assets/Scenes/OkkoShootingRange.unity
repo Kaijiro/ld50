@@ -356,9 +356,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 813f1bc883e2b9449a94392a55cd01d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shoot_capacity: 2
+  shoot_capacity: 1
   shoot_loader: {fileID: 269247658}
-  loading_velocity: 2
+  loading_velocity: 1
   catPrefab: {fileID: 1911613836498726818, guid: f6005cdb9023fb84a92b63041aaf4772, type: 3}
   respawnDelay: 1
 --- !u!1 &269247656
