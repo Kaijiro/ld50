@@ -9,11 +9,14 @@ public class ShootingRangeStudy : MonoBehaviour
     private float shoot_left = 1f;
     public Slider shoot_loader;
     public float loading_velocity = 1f;
+    public GameObject catPrefab;
+    public float respawnDelay = 1f;
 
     // Start is called before the first frame update
     void Start()
     {
         shoot_left = shoot_capacity;
+        Instantiate(catPrefab);
     }
 
     // Update is called once per frame
@@ -35,7 +38,12 @@ public class ShootingRangeStudy : MonoBehaviour
                     Debug.Log("Clicked on " + hit.collider.name);
 
                     Destroy(hit.collider.gameObject);
+                    if (hit.collider.gameObject.tag == "cat")
+                    {
+                        StartCoroutine(getVengeance());
+                    }
                 }
+                    
                 else
                 {
                     Debug.Log("Nothing hit");
@@ -59,6 +67,16 @@ public class ShootingRangeStudy : MonoBehaviour
         }
 
         shoot_loader.value = shoot_left / shoot_capacity;
+    }
+
+    // Temp CoRoutine that will respawn Cat Astroph
+    IEnumerator getVengeance()
+    {
+
+        yield return new WaitForSeconds(respawnDelay);
+        // keeping it simple for now : it will always spawn at the same spot.
+        Instantiate(catPrefab);
+
     }
 
 }
