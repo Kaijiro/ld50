@@ -2662,7 +2662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabToSpawn: {fileID: 1911613836498726818, guid: f6005cdb9023fb84a92b63041aaf4772, type: 3}
   catSpawnChance: 38.9
-  furryCoefficient: 0.27
+  furryCoefficient: 0.3
   debugPrecious: {fileID: 0}
 --- !u!1 &1737523013
 GameObject:
