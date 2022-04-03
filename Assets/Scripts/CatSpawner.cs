@@ -71,7 +71,12 @@ public class CatSpawner : MonoBehaviour
                 bool spawnerIsPlacedAtTheRightOfThePrecious = spawnerPosition.x > targetedPrecious.transform.position.x;
 
                 mishchief_little_shit catWalkingBehavior = this.catInstance.GetComponent<mishchief_little_shit>();
-                catWalkingBehavior.m_Speed = (catWalkingBehavior.m_Speed + (this.furryCoefficient * this.hitCount)) * (spawnerIsPlacedAtTheRightOfThePrecious ? -1 : 1);
+                catWalkingBehavior.m_Speed = (catWalkingBehavior.m_Speed + (this.furryCoefficient * this.hitCount));
+
+                if(spawnerIsPlacedAtTheRightOfThePrecious){
+                    catWalkingBehavior.m_Speed = catWalkingBehavior.m_Speed * -1;
+                    this.catInstance.GetComponent<SpriteRenderer>().flipX = true;
+                }
             }
 
             yield return new WaitForSeconds(1f);
