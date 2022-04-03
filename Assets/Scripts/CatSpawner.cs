@@ -30,7 +30,7 @@ public class CatSpawner : MonoBehaviour
         Debug.Log("Starting Coroutine");
         StartCoroutine(DoCheck());
 
-        EventSystem.Instance.OnPreciousSmashed += BecomeInvincible;
+        EventSystem.Instance.OnPreciousReached += BecomeInvincible;
         EventSystem.Instance.OnCatSplashed += OnCatSplashed;
     }
 

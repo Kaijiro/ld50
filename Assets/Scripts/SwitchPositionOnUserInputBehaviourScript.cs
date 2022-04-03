@@ -17,6 +17,8 @@ public class SwitchPositionOnUserInputBehaviourScript : MonoBehaviour
         if(this.objectsToSwitch.Length > 0){
             this.MoveAtObjectWithIndex(0);
         }
+
+        EventSystem.Instance.OnPreciousReached += CenterOnPreciousRoom;
     }
 
     // Update is called once per frame
@@ -35,5 +37,13 @@ public class SwitchPositionOnUserInputBehaviourScript : MonoBehaviour
         float currentZ = this.transform.position.z;
         Vector3 objectPosition = this.objectsToSwitch[objectIndexToMoveAt].position;
         this.transform.position = new Vector3(objectPosition.x, objectPosition.y, currentZ);
+    }
+
+    private void CenterOnPreciousRoom(GameObject precious){
+        // Freeze control
+
+        // Hierarchy is World (index 3) -> Room (index 2) -> Precious (index 1) -> "smashed precious" (index 0)
+        Transform roomTransform = precious.GetComponentsInParent<Transform>()[2];
+        this.transform.position = new Vector3(roomTransform.position.x, roomTransform.position.y, this.transform.position.z);
     }
 }

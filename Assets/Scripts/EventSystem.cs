@@ -10,10 +10,10 @@ public class EventSystem : MonoBehaviour
         EventSystem.Instance = this;
     }
 
-    public event Action<GameObject> OnPreciousSmashed;
+    public event Action<GameObject> OnPreciousReached;
 
-    public void PreciousSmashed(GameObject precious){
-        OnPreciousSmashed?.Invoke(precious);
+    public void PreciousReached(GameObject precious){
+        OnPreciousReached?.Invoke(precious);
     }
 
     public event Action OnCatSplashed;

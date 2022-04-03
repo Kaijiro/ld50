@@ -30,7 +30,7 @@ public class mishchief_little_shit : MonoBehaviour
             Debug.Log("Collided !");
             move = false;
 
-            EventSystem.Instance.PreciousSmashed(collision.gameObject);
+            EventSystem.Instance.PreciousReached(collision.gameObject);
         }
     }
 }

@@ -10,7 +10,7 @@ public class CatAnimationScript : MonoBehaviour {
         this.animator = this.GetComponent<Animator>();
         this.spriteRenderer = this.GetComponent<SpriteRenderer>();
 
-        EventSystem.Instance.OnPreciousSmashed += AnimateGameEnd;
+        EventSystem.Instance.OnPreciousReached += AnimateGameEnd;
     }
 
     public void AnimateGameEnd(GameObject smashedPrecious){
@@ -31,6 +31,6 @@ public class CatAnimationScript : MonoBehaviour {
 
     private void OnDestroy()
     {
-        EventSystem.Instance.OnPreciousSmashed -= AnimateGameEnd;
+        EventSystem.Instance.OnPreciousReached -= AnimateGameEnd;
     }
 }
