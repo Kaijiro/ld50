@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Precious : MonoBehaviour
 {
+
     private void OnDestroy()
     {
-        SceneManager.LoadScene("GameOver");
+        SceneManager.LoadScene("GameOver") ;
     }
 
 
@@ -15,6 +16,7 @@ public class Precious : MonoBehaviour
     {
         if (collision.gameObject.tag == "deathvoid")
         {
+            StaticScore.CrossSceneInformation = collision.gameObject.name;
             Destroy(this.gameObject);  
         }
 
