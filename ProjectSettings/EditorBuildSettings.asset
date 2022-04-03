@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/OkkoShootingRange.unity
-    guid: 5f4917ba301cac94d8aea758d2ece304
+    path: Assets/Scenes/Main.unity
+    guid: eed86679878c2c746a37969964833134
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 7d4c18b27ebc7744bbd30df950952070
