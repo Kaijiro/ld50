@@ -19,6 +19,8 @@ public class CatSpawner : MonoBehaviour
 
     private GameObject catInstance = null;
 
+    private bool isCatInvincible = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,18 +30,26 @@ public class CatSpawner : MonoBehaviour
         Debug.Log("Starting Coroutine");
         StartCoroutine(DoCheck());
 
-        //EventSystem.Instance.OnPreciousSmashed += DespawnCat; // Temporary code to test the Spawner
+        EventSystem.Instance.OnPreciousSmashed += BecomeInvincible;
         EventSystem.Instance.OnCatSplashed += OnCatSplashed;
     }
 
     private void OnCatSplashed(){
-        IncreaseFurry();
-        DespawnCat();
+        if(!isCatInvincible)
+        {
+            IncreaseFurry();
+            DespawnCat();
+        }
     }
 
     private void IncreaseFurry(){
         Debug.Log("Furry Increased !");
         this.hitCount++;
+    }
+
+    private void BecomeInvincible(GameObject precious){
+        Debug.Log("I AM INVINCIBLE !");
+        this.isCatInvincible = true;
     }
 
     private bool CatShouldSpawn(){

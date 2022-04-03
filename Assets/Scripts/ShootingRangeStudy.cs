@@ -39,7 +39,6 @@ public class ShootingRangeStudy : MonoBehaviour
                 if (hit.collider.gameObject.tag == "cat")
                 {
                     //Debug.Log("Clicked on " + hit.collider.name);
-                    Destroy(hit.collider.gameObject);
                     EventSystem.Instance.CatSplashed();
                 }
 
