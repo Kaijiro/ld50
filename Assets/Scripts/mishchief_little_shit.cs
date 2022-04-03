@@ -33,7 +33,7 @@ public class mishchief_little_shit : MonoBehaviour
             move = false;
             GetComponent<SpriteRenderer>().sprite = lame_animation;
             collision.gameObject.GetComponent<Rigidbody2D>().gravityScale = 3f;
-            // Destroy(collision.gameObject);    
+            // Destroy(collision.gameObject); 
         }
 
     }

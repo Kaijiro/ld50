@@ -14,6 +14,7 @@ public class ShootingRangeStudy : MonoBehaviour
     void Start()
     {
         shoot_left = shoot_capacity;
+        StaticScore.CrossSceneTimer = 0f;
     }
 
     // Update is called once per frame
@@ -37,9 +38,12 @@ public class ShootingRangeStudy : MonoBehaviour
                 Destroy(hit.collider.gameObject);
                 if (hit.collider.gameObject.tag == "cat")
                 {
-                    Debug.Log("Clicked on " + hit.collider.name);
+                    //Debug.Log("Clicked on " + hit.collider.name);
 
                     EventSystem.Instance.CatSplashed();
+                } else
+                {
+                    StaticScore.CrossSceneInformation = hit.collider.gameObject.name;
                 }
             } else
             {
@@ -60,6 +64,7 @@ public class ShootingRangeStudy : MonoBehaviour
         }
 
         this.UpdateShootLoaderDisplay(shoot_left / shoot_capacity);
+        StaticScore.CrossSceneTimer += Time.deltaTime;
     }
 
     private void UpdateShootLoaderDisplay(float shootLeftValue){
