@@ -17,7 +17,6 @@ public class theHand : MonoBehaviour
     void Update()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Debug.Log(mousePosition.y);
         // prevent to aim "too high" so that "cut" part of sprite is not shown
         if (mousePosition.y >= vertical_limit)
         {

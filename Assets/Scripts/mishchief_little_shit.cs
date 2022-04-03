@@ -7,14 +7,15 @@ public class mishchief_little_shit : MonoBehaviour
 {
     Rigidbody2D m_Rigidbody;
     public float m_Speed = 0.001f;
-    public Sprite lame_animation;
-
     private bool move = true;
+    private Animator animator;
+    private GameObject attackedPrecious;
 
     void Start()
     {
         //Fetch the Rigidbody from the GameObject with this script attached
         m_Rigidbody = GetComponent<Rigidbody2D>();
+        this.animator = this.GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -25,17 +26,18 @@ public class mishchief_little_shit : MonoBehaviour
         }        
     }
 
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "precious")
         {
+            Debug.Log("Collided !");
             move = false;
-            GetComponent<SpriteRenderer>().sprite = lame_animation;
-            collision.gameObject.GetComponent<Rigidbody2D>().gravityScale = 3f;
-            // Destroy(collision.gameObject);    
+            this.animator.SetTrigger("IsAttacking");
+            this.attackedPrecious = collision.gameObject;
         }
-
     }
 
+    public void TipObject(){
+        this.attackedPrecious.GetComponent<Rigidbody2D>().gravityScale = 3f;
+    }
 }
