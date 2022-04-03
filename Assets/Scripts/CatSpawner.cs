@@ -75,7 +75,7 @@ public class CatSpawner : MonoBehaviour
 
                 if(spawnerIsPlacedAtTheRightOfThePrecious){
                     catWalkingBehavior.m_Speed = catWalkingBehavior.m_Speed * -1;
-                    this.catInstance.GetComponent<SpriteRenderer>().flipX = true;
+                    this.catInstance.GetComponentInChildren<SpriteRenderer>().flipX = true;
                 }
             }
 

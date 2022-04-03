@@ -5,24 +5,21 @@ using UnityEngine;
 
 public class mishchief_little_shit : MonoBehaviour
 {
-    Rigidbody2D m_Rigidbody;
     public float m_Speed = 0.001f;
+    private Rigidbody2D rigidBody;
     private bool move = true;
-    private Animator animator;
-    private GameObject attackedPrecious;
 
     void Start()
     {
         //Fetch the Rigidbody from the GameObject with this script attached
-        m_Rigidbody = GetComponent<Rigidbody2D>();
-        this.animator = this.GetComponent<Animator>();
+        this.rigidBody = this.GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate()
     {       
         if (move)
         {
-            m_Rigidbody.MovePosition(transform.position + new Vector3(1, 0, 0) * Time.deltaTime * m_Speed);
+            this.rigidBody.MovePosition(transform.position + new Vector3(1, 0, 0) * Time.deltaTime * m_Speed);
         }        
     }
 
@@ -32,12 +29,8 @@ public class mishchief_little_shit : MonoBehaviour
         {
             Debug.Log("Collided !");
             move = false;
-            this.animator.SetTrigger("IsAttacking");
-            this.attackedPrecious = collision.gameObject;
-        }
-    }
 
-    public void TipObject(){
-        this.attackedPrecious.GetComponent<Rigidbody2D>().gravityScale = 3f;
+            EventSystem.Instance.PreciousSmashed(collision.gameObject);
+        }
     }
 }
