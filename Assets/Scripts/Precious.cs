@@ -16,7 +16,7 @@ public class Precious : MonoBehaviour
     {
         if (collision.gameObject.tag == "deathvoid")
         {
-            StaticScore.CrossSceneInformation = collision.gameObject.name;
+            StaticScore.CrossSceneInformation = this.gameObject.name;
             Destroy(this.gameObject);  
         }
 

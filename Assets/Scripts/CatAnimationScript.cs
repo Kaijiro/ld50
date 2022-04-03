@@ -29,4 +29,9 @@ public class CatAnimationScript : MonoBehaviour {
     public void TipObject(){
         this.attackedPrecious.GetComponent<Rigidbody2D>().gravityScale = 3f;
     }
+
+    private void OnDestroy()
+    {
+        EventSystem.Instance.OnPreciousSmashed -= AnimateGameEnd;
+    }
 }
