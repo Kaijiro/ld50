@@ -21,9 +21,8 @@ public class CatAnimationScript : MonoBehaviour {
     }
 
     private void fixSpriteTransform(){
-        Debug.Log("fixingTheTransform");
-        
-        this.spriteRenderer.sharedMaterial.mainTextureOffset = new Vector2(0, - 0.5f);
+        Debug.Log("fixing The Transform");
+        this.transform.position = this.transform.position - new Vector3(0, .25f, 0);
     }
 
     public void TipObject(){
