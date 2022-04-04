@@ -5,20 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class Precious : MonoBehaviour
 {
-
-    private void OnDestroy()
-    {
-        SceneManager.LoadScene("GameOver") ;
-    }
-
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "deathvoid")
         {
             StaticScore.CrossSceneInformation = this.gameObject.name;
-            Destroy(this.gameObject);  
+            StartCoroutine(GameOver());  
+        }
+    }
+
+    IEnumerator GameOver(){
+        while(GameObject.Find("World").GetComponent<AudioSource>().isPlaying){
+            yield return new WaitForSeconds(.1f);
         }
 
+        SceneManager.LoadScene("GameOver");
     }
 }

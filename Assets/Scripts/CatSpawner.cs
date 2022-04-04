@@ -19,6 +19,8 @@ public class CatSpawner : MonoBehaviour
 
     public float timeBeforeInvincibility;
 
+    public AudioClip despawnCatSound;
+
     private GameObject[] precious;
 
     public GameObject debugPrecious;
@@ -65,6 +67,7 @@ public class CatSpawner : MonoBehaviour
     }
 
     private void DespawnCat(){
+        this.GetComponent<AudioSource>().PlayOneShot(this.despawnCatSound);
         Destroy(this.catInstance);
         this.catInstance = null;
     }

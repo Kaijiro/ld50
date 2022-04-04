@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class CatAnimationScript : MonoBehaviour {
 
+    public AudioClip preciousSmashedSound;
+
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private GameObject attackedPrecious;
@@ -29,7 +31,8 @@ public class CatAnimationScript : MonoBehaviour {
     }
 
     public void OnAttackAnimationEnd(){
-        this.attackedPrecious.GetComponent<Rigidbody2D>().gravityScale = 3f;
+        this.attackedPrecious.GetComponent<Rigidbody2D>().gravityScale = 2.5f;
+        GameObject.Find("World").GetComponent<AudioSource>().PlayOneShot(this.preciousSmashedSound);
     }
 
     public void AnimateCatDown(Action callback){
