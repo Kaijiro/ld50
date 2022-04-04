@@ -28,10 +28,13 @@ public class Precious : MonoBehaviour
 
     public void Touched()
     {
-        gameObject.GetComponent<Rigidbody2D>().gravityScale = 2.5f;
-        chaos_speed = Random.Range(-20f, 0f);
-        falling = true;
-        GameObject.Find("World").GetComponent<AudioSource>().PlayOneShot(this.preciousSmashedSound);
+        if (!falling)
+        {
+            gameObject.GetComponent<Rigidbody2D>().gravityScale = 2.5f;
+            chaos_speed = Random.Range(-20f, 0f);
+            falling = true;
+            GameObject.Find("World").GetComponent<AudioSource>().PlayOneShot(this.preciousSmashedSound);
+        }
     }
 
     IEnumerator GameOver(){
