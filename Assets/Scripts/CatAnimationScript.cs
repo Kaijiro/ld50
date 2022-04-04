@@ -20,7 +20,7 @@ public class CatAnimationScript : MonoBehaviour {
         this.attackedPrecious = smashedPrecious;
 
         this.animator.SetTrigger("IsAttacking");
-        this.fixSpriteTransform(new Vector3(0, .25f, 0));
+        this.fixSpriteTransform(new Vector3(0, .3f, 0));
     }
 
     private void fixSpriteTransform(Vector3 offset){
@@ -36,7 +36,7 @@ public class CatAnimationScript : MonoBehaviour {
         this.animateCatDownCallback = callback;
 
         this.animator.SetTrigger("CatDown");
-        this.fixSpriteTransform(new Vector3(0, .4f, 0));
+        this.fixSpriteTransform(new Vector3(0, .6f, 0));
     }
 
     public void OnCatDownAnimationEnd(){
