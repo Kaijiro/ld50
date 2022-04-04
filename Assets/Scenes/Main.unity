@@ -4222,6 +4222,7 @@ MonoBehaviour:
   furryCoefficient: 0.3
   furryMax: 6
   furryMeter: {fileID: 1747536612}
+  timeBeforeInvincibility: 0.25
   debugPrecious: {fileID: 0}
 --- !u!1 &1668667228
 GameObject:

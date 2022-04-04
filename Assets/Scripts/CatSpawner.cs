@@ -17,6 +17,7 @@ public class CatSpawner : MonoBehaviour
     public float furryMax;
     public Slider furryMeter;
 
+    public float timeBeforeInvincibility;
 
     private GameObject[] precious;
 
@@ -55,7 +56,8 @@ public class CatSpawner : MonoBehaviour
     }
 
     private void BecomeInvincible(GameObject precious){
-        this.isCatInvincible = true;
+        Debug.Log("Becoming invincible");
+        StartCoroutine(TriggerInvincibility());
     }
 
     private bool CatShouldSpawn(){
@@ -96,5 +98,12 @@ public class CatSpawner : MonoBehaviour
 
             yield return new WaitForSeconds(1f);
         }
+    }
+
+    IEnumerator TriggerInvincibility(){
+        yield return new WaitForSecondsRealtime(this.timeBeforeInvincibility);
+        this.isCatInvincible = true;
+        Debug.Log("Actually invincible");
+        StopCoroutine(TriggerInvincibility());
     }
 }
