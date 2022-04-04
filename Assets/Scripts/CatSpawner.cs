@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CatSpawner : MonoBehaviour
 {
@@ -11,7 +12,11 @@ public class CatSpawner : MonoBehaviour
     [Min(0.01f)]
     public float furryCoefficient;
 
-    private int hitCount;
+    // Furry
+    private float furryJauge;
+    public float furryMax;
+    public Slider furryMeter;
+
 
     private GameObject[] precious;
 
@@ -44,7 +49,9 @@ public class CatSpawner : MonoBehaviour
     }
 
     private void IncreaseFurry(){
-        this.hitCount++;
+        furryJauge = Mathf.Min(furryMax, furryJauge + 1f);
+        Debug.Log("Furry Increased to "+ furryJauge);
+        furryMeter.value = furryJauge / furryMax;
     }
 
     private void BecomeInvincible(GameObject precious){
@@ -79,7 +86,7 @@ public class CatSpawner : MonoBehaviour
                 bool spawnerIsPlacedAtTheRightOfThePrecious = spawnerPosition.x > targetedPrecious.transform.position.x;
 
                 mishchief_little_shit catWalkingBehavior = this.catInstance.GetComponent<mishchief_little_shit>();
-                catWalkingBehavior.m_Speed = (catWalkingBehavior.m_Speed + (this.furryCoefficient * this.hitCount));
+                catWalkingBehavior.m_Speed = (catWalkingBehavior.m_Speed + (this.furryCoefficient * this.furryJauge));
 
                 if(spawnerIsPlacedAtTheRightOfThePrecious){
                     catWalkingBehavior.m_Speed = catWalkingBehavior.m_Speed * -1;

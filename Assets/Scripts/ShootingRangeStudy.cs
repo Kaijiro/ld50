@@ -1,11 +1,18 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ShootingRangeStudy : MonoBehaviour
 {
     public int shoot_capacity = 1;
     private float shoot_left = 1f;
+    
+    // loading UI
     public Slider shoot_loader;
+    public TextMeshProUGUI hint_loader;
+
+    public TextMeshProUGUI ui_timer;
+
     public float loading_velocity = 1f;
 
     public GameObject reticle;
@@ -47,11 +54,7 @@ public class ShootingRangeStudy : MonoBehaviour
                     Destroy(hit.collider.gameObject);
                     StaticScore.CrossSceneInformation = hit.collider.gameObject.name;
                 }
-            } else
-            {
-                // TODO : add a UI prompt ?
-                Debug.Log("RELOAD");
-            }
+            } 
             
         }      
 
@@ -60,18 +63,30 @@ public class ShootingRangeStudy : MonoBehaviour
     private void FixedUpdate()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if (mousePosition.y < -5f)
+        if (mousePosition.y < -4.2f)
         {
             shoot_left = Mathf.Min(shoot_capacity, shoot_left + Time.deltaTime * loading_velocity);
         }
 
         this.UpdateShootLoaderDisplay(shoot_left / shoot_capacity);
         StaticScore.CrossSceneTimer += Time.deltaTime;
+        ui_timer.SetText(StaticScore.CrossSceneTimer.ToString("#.000"));
     }
 
     private void UpdateShootLoaderDisplay(float shootLeftValue){
         if(this.shoot_loader != null){
             this.shoot_loader.value = shootLeftValue;
         }
+        if (this.hint_loader != null)
+        {
+            if (shootLeftValue < 1f)
+            {
+                this.hint_loader.SetText("Aim here to reload");
+            }
+            else
+            {
+                this.hint_loader.SetText("");
+            }
+        }     
     }
 }
