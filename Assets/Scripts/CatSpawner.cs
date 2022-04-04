@@ -87,6 +87,7 @@ public class CatSpawner : MonoBehaviour
                 
                 Vector3 spawnerPosition = targetedPrecious.GetComponentsInChildren<Transform>()[1].position;
                 this.catInstance = GameObject.Instantiate(this.prefabToSpawn, spawnerPosition, Quaternion.identity, this.transform);
+                this.isCatInvincible = false;
 
                 bool spawnerIsPlacedAtTheRightOfThePrecious = spawnerPosition.x > targetedPrecious.transform.position.x;
 

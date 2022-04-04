@@ -5452,7 +5452,7 @@ MonoBehaviour:
   furryCoefficient: 0.3
   furryMax: 6
   furryMeter: {fileID: 1747536612}
-  timeBeforeInvincibility: 0.25
+  timeBeforeInvincibility: 0.333
   despawnCatSound: {fileID: 8300000, guid: 8b0d87106e6658d44ace72c958517ad1, type: 3}
   debugPrecious: {fileID: 0}
 --- !u!82 &1627930106
