@@ -416,6 +416,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 706715724}
     m_Modifications:
+    - target: {fileID: -4491894390963713480, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
+      propertyPath: preciousSmashedSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e5cec18817d36604b88cc94db5cd0df8, type: 3}
     - target: {fileID: 728460555313645237, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
       propertyPath: m_Mass
       value: 0.1
@@ -864,6 +868,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 342660412}
     m_Modifications:
+    - target: {fileID: -4491894390963713480, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
+      propertyPath: preciousSmashedSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e5cec18817d36604b88cc94db5cd0df8, type: 3}
     - target: {fileID: 728460555313645237, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
       propertyPath: m_Mass
       value: 0.1
@@ -1907,6 +1915,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 706715724}
     m_Modifications:
+    - target: {fileID: -4491894390963713480, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
+      propertyPath: preciousSmashedSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e5cec18817d36604b88cc94db5cd0df8, type: 3}
     - target: {fileID: 728460555313645237, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
       propertyPath: m_Mass
       value: 0.1
@@ -2144,6 +2156,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 342660412}
     m_Modifications:
+    - target: {fileID: -4491894390963713480, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
+      propertyPath: preciousSmashedSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e5cec18817d36604b88cc94db5cd0df8, type: 3}
     - target: {fileID: 728460555313645237, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
       propertyPath: m_Mass
       value: 0.1
@@ -3815,6 +3831,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 706715724}
     m_Modifications:
+    - target: {fileID: -4491894390963713480, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
+      propertyPath: preciousSmashedSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e5cec18817d36604b88cc94db5cd0df8, type: 3}
     - target: {fileID: 728460555313645237, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
       propertyPath: m_Mass
       value: 0.1
@@ -4140,6 +4160,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1929587595}
     m_Modifications:
+    - target: {fileID: -4491894390963713480, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
+      propertyPath: preciousSmashedSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e5cec18817d36604b88cc94db5cd0df8, type: 3}
     - target: {fileID: 728460555313645237, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
       propertyPath: m_Mass
       value: 0.1
@@ -4682,8 +4706,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!82 &1397854837
 AudioSource:
---- !u!1 &1426728413
-GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4705,7 +4727,7 @@ GameObject:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -4714,7 +4736,7 @@ GameObject:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 1e-45
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -4722,8 +4744,125 @@ GameObject:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1
-      value: 0
+      time: 0.1
+      value: 1e-45
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.2
+      value: 1e-45
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.4
+      value: 1e-45
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.8
+      value: 1e-45
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.6
+      value: 1e-45
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 3.2
+      value: 1e-45
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 6.4
+      value: 1e-45
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 12.8
+      value: 1e-45
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 25.6
+      value: 1e-45
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 51.2
+      value: 1e-45
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 102.4
+      value: 1e-45
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 204.8
+      value: 1e-45
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 409.6
+      value: 1e-45
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 500
+      value: 1e-45
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -4778,6 +4917,12 @@ GameObject:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1426728413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1426728414}
@@ -4863,6 +5008,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 342660412}
     m_Modifications:
+    - target: {fileID: -4491894390963713480, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
+      propertyPath: preciousSmashedSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e5cec18817d36604b88cc94db5cd0df8, type: 3}
     - target: {fileID: 728460555313645237, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
       propertyPath: m_Mass
       value: 0.1
@@ -4978,9 +5127,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1833427277}
     m_Modifications:
+    - target: {fileID: 6807786045481534532, guid: fbbcfbbc58983bd4b9881ee79fea5546, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.03
+      objectReference: {fileID: 0}
     - target: {fileID: 6807786045718564470, guid: fbbcfbbc58983bd4b9881ee79fea5546, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6807786045718564470, guid: fbbcfbbc58983bd4b9881ee79fea5546, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4992,7 +5145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6807786045718564470, guid: fbbcfbbc58983bd4b9881ee79fea5546, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10
+      value: 9.16
       objectReference: {fileID: 0}
     - target: {fileID: 6807786045718564470, guid: fbbcfbbc58983bd4b9881ee79fea5546, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6048,6 +6201,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 436546606}
     m_Modifications:
+    - target: {fileID: -4491894390963713480, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
+      propertyPath: preciousSmashedSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e5cec18817d36604b88cc94db5cd0df8, type: 3}
     - target: {fileID: 728460555313645237, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
       propertyPath: m_Mass
       value: 0.1
@@ -6173,6 +6330,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1929587595}
     m_Modifications:
+    - target: {fileID: -4491894390963713480, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
+      propertyPath: preciousSmashedSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e5cec18817d36604b88cc94db5cd0df8, type: 3}
     - target: {fileID: 728460555313645237, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
       propertyPath: m_Mass
       value: 0.1

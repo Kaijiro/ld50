@@ -53,7 +53,9 @@ public class ShootingRangeStudy : MonoBehaviour
 
                 if (hit.collider.gameObject.tag == "precious")
                 {
-                    Destroy(hit.collider.gameObject);
+                    //Destroy(hit.collider.gameObject);
+                    hit.collider.gameObject.GetComponent<Precious>().Touched();
+                    //GameObject.Find("World").GetComponent<AudioSource>().PlayOneShot(this.preciousSmashedSound);
                     StaticScore.CrossSceneInformation = hit.collider.gameObject.name;
                 }
             } 
