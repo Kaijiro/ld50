@@ -45,13 +45,15 @@ public class ShootingRangeStudy : MonoBehaviour
                 Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
 
-                if (hit.collider.gameObject.tag == "cat")
+
+
+                if (hit.collider != null && hit.collider.gameObject.tag == "cat")
                 {
                     //Debug.Log("Clicked on " + hit.collider.name);
                     EventSystem.Instance.CatSplashed();
                 }
 
-                if (hit.collider.gameObject.tag == "precious")
+                if (hit.collider != null && hit.collider.gameObject.tag == "precious")
                 {
                     //Destroy(hit.collider.gameObject);
                     hit.collider.gameObject.GetComponent<Precious>().Touched();
