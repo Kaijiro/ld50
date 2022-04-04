@@ -9,7 +9,7 @@ public class GameOver : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        final_text.SetText("You delayed cat "+ StaticScore.CrossSceneTimer.ToString("#.000") + " s but inevitably "+ StaticScore.CrossSceneInformation + " has been broken.");
+        final_text.SetText("You delayed Lokat "+ StaticScore.CrossSceneTimer.ToString("#.000") + " s but inevitably "+ StaticScore.CrossSceneInformation + " has been broken.");
     }
 
     // Update is called once per frame
