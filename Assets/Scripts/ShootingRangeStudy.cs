@@ -1,11 +1,16 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ShootingRangeStudy : MonoBehaviour
 {
     public int shoot_capacity = 1;
     private float shoot_left = 1f;
+    
+    // loading UI
     public Slider shoot_loader;
+    public TextMeshProUGUI hint_loader;
+
     public float loading_velocity = 1f;
 
     public GameObject reticle;
@@ -61,7 +66,8 @@ public class ShootingRangeStudy : MonoBehaviour
     private void FixedUpdate()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if (mousePosition.y < -5f)
+        Debug.Log(mousePosition.y);
+        if (mousePosition.y < -4.2f)
         {
             shoot_left = Mathf.Min(shoot_capacity, shoot_left + Time.deltaTime * loading_velocity);
         }
@@ -74,5 +80,16 @@ public class ShootingRangeStudy : MonoBehaviour
         if(this.shoot_loader != null){
             this.shoot_loader.value = shootLeftValue;
         }
+        if (this.hint_loader != null)
+        {
+            if (shootLeftValue < 1f)
+            {
+                this.hint_loader.SetText("Aim here to reload");
+            }
+            else
+            {
+                this.hint_loader.SetText("");
+            }
+        }     
     }
 }
