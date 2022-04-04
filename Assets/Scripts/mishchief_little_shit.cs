@@ -29,6 +29,8 @@ public class mishchief_little_shit : MonoBehaviour
         {
             Debug.Log("Collided !");
             move = false;
+            // prevent cat to be pushed by rotating falling precious
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
 
             EventSystem.Instance.PreciousReached(collision.gameObject);
         }

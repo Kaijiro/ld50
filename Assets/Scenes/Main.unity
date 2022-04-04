@@ -416,6 +416,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 706715724}
     m_Modifications:
+    - target: {fileID: -4491894390963713480, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
+      propertyPath: preciousSmashedSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e5cec18817d36604b88cc94db5cd0df8, type: 3}
     - target: {fileID: 728460555313645237, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
       propertyPath: m_Mass
       value: 0.1
@@ -864,6 +868,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 342660412}
     m_Modifications:
+    - target: {fileID: -4491894390963713480, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
+      propertyPath: preciousSmashedSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e5cec18817d36604b88cc94db5cd0df8, type: 3}
     - target: {fileID: 728460555313645237, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
       propertyPath: m_Mass
       value: 0.1
@@ -1907,6 +1915,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 706715724}
     m_Modifications:
+    - target: {fileID: -4491894390963713480, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
+      propertyPath: preciousSmashedSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e5cec18817d36604b88cc94db5cd0df8, type: 3}
     - target: {fileID: 728460555313645237, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
       propertyPath: m_Mass
       value: 0.1
@@ -2144,6 +2156,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 342660412}
     m_Modifications:
+    - target: {fileID: -4491894390963713480, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
+      propertyPath: preciousSmashedSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e5cec18817d36604b88cc94db5cd0df8, type: 3}
     - target: {fileID: 728460555313645237, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
       propertyPath: m_Mass
       value: 0.1
@@ -3815,6 +3831,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 706715724}
     m_Modifications:
+    - target: {fileID: -4491894390963713480, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
+      propertyPath: preciousSmashedSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e5cec18817d36604b88cc94db5cd0df8, type: 3}
     - target: {fileID: 728460555313645237, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
       propertyPath: m_Mass
       value: 0.1
@@ -4140,6 +4160,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1929587595}
     m_Modifications:
+    - target: {fileID: -4491894390963713480, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
+      propertyPath: preciousSmashedSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e5cec18817d36604b88cc94db5cd0df8, type: 3}
     - target: {fileID: 728460555313645237, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
       propertyPath: m_Mass
       value: 0.1
@@ -4984,6 +5008,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 342660412}
     m_Modifications:
+    - target: {fileID: -4491894390963713480, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
+      propertyPath: preciousSmashedSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e5cec18817d36604b88cc94db5cd0df8, type: 3}
     - target: {fileID: 728460555313645237, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
       propertyPath: m_Mass
       value: 0.1
@@ -5099,9 +5127,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1833427277}
     m_Modifications:
+    - target: {fileID: 6807786045481534532, guid: fbbcfbbc58983bd4b9881ee79fea5546, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.03
+      objectReference: {fileID: 0}
     - target: {fileID: 6807786045718564470, guid: fbbcfbbc58983bd4b9881ee79fea5546, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6807786045718564470, guid: fbbcfbbc58983bd4b9881ee79fea5546, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5113,7 +5145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6807786045718564470, guid: fbbcfbbc58983bd4b9881ee79fea5546, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10
+      value: 9.16
       objectReference: {fileID: 0}
     - target: {fileID: 6807786045718564470, guid: fbbcfbbc58983bd4b9881ee79fea5546, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6169,6 +6201,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 436546606}
     m_Modifications:
+    - target: {fileID: -4491894390963713480, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
+      propertyPath: preciousSmashedSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e5cec18817d36604b88cc94db5cd0df8, type: 3}
     - target: {fileID: 728460555313645237, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
       propertyPath: m_Mass
       value: 0.1
@@ -6294,6 +6330,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1929587595}
     m_Modifications:
+    - target: {fileID: -4491894390963713480, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
+      propertyPath: preciousSmashedSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e5cec18817d36604b88cc94db5cd0df8, type: 3}
     - target: {fileID: 728460555313645237, guid: 25e2fce29d22f1c4e9e64b817bff460c, type: 3}
       propertyPath: m_Mass
       value: 0.1
