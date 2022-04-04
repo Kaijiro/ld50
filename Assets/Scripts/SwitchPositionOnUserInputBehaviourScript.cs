@@ -12,6 +12,8 @@ public class SwitchPositionOnUserInputBehaviourScript : MonoBehaviour
 
     private int actualIndex;
 
+    private bool canMove = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +27,7 @@ public class SwitchPositionOnUserInputBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.anyKeyDown)
+        if (Input.anyKeyDown && canMove)
         {
             if (Input.GetKeyDown(this.forward))
             {
@@ -52,6 +54,7 @@ public class SwitchPositionOnUserInputBehaviourScript : MonoBehaviour
 
     private void CenterOnPreciousRoom(GameObject precious){
         // Freeze control
+        canMove = false;
 
         // Hierarchy is World (index 3) -> Room (index 2) -> Precious (index 1) -> "smashed precious" (index 0)
         Transform roomTransform = precious.GetComponentsInParent<Transform>()[2];
