@@ -25,10 +25,10 @@ public class CatSpawner : MonoBehaviour
     void Start()
     {
         this.precious = GameObject.FindGameObjectsWithTag("precious");
-        Debug.Log("Found " + this.precious.Length + "precious in the scene.");
+        Debug.Log("Found " + this.precious.Length + " precious in the scene.");
         
         Debug.Log("Starting Coroutine");
-        StartCoroutine(DoCheck());
+        StartCoroutine(SpawnLoop());
 
         EventSystem.Instance.OnPreciousReached += BecomeInvincible;
         EventSystem.Instance.OnCatSplashed += OnCatSplashed;
@@ -37,18 +37,17 @@ public class CatSpawner : MonoBehaviour
     private void OnCatSplashed(){
         if(!isCatInvincible)
         {
+            this.catInstance.GetComponentInChildren<mishchief_little_shit>().m_Speed = 0;
+            this.catInstance.GetComponentInChildren<CatAnimationScript>().AnimateCatDown(DespawnCat);
             IncreaseFurry();
-            DespawnCat();
         }
     }
 
     private void IncreaseFurry(){
-        Debug.Log("Furry Increased !");
         this.hitCount++;
     }
 
     private void BecomeInvincible(GameObject precious){
-        Debug.Log("I AM INVINCIBLE !");
         this.isCatInvincible = true;
     }
 
@@ -57,12 +56,11 @@ public class CatSpawner : MonoBehaviour
     }
 
     private void DespawnCat(){
-        Debug.Log("Destroying the cat.");
         Destroy(this.catInstance);
         this.catInstance = null;
     }
 
-    IEnumerator DoCheck(){ // TODO Poor method name
+    IEnumerator SpawnLoop(){
         for(;;){
             if(CatShouldSpawn()){
                 Debug.Log("Spawning the cat !");
