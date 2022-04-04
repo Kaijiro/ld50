@@ -7,8 +7,9 @@ public class SwitchPositionOnUserInputBehaviourScript : MonoBehaviour
     [SerializeField]
     public Transform[] objectsToSwitch;
 
-    public KeyCode keyToHit;
-    
+    public KeyCode forward;
+    public KeyCode backward;
+
     private int actualIndex;
 
     // Start is called before the first frame update
@@ -22,10 +23,20 @@ public class SwitchPositionOnUserInputBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.anyKeyDown && Input.GetKeyDown(this.keyToHit)){
-            int nextIndex = this.actualIndex == this.objectsToSwitch.Length - 1 ? 0 : this.actualIndex + 1;
+        if (Input.anyKeyDown)
+        {
+            if (Input.GetKeyDown(this.forward))
+            {
+                int nextIndex = this.actualIndex == this.objectsToSwitch.Length - 1 ? 0 : this.actualIndex + 1;
 
-            this.MoveAtObjectWithIndex(nextIndex);
+                this.MoveAtObjectWithIndex(nextIndex);
+            }
+            if (Input.GetKeyDown(this.backward))
+            {
+                int nextIndex = this.actualIndex == 0 ? this.objectsToSwitch.Length - 1 : this.actualIndex - 1;
+
+                this.MoveAtObjectWithIndex(nextIndex);
+            }
         }
     }
 

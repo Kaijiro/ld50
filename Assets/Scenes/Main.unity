@@ -4161,7 +4161,8 @@ MonoBehaviour:
   - {fileID: 192759866}
   - {fileID: 1923774018}
   - {fileID: 1612310508}
-  keyToHit: 32
+  forward: 275
+  backward: 276
 --- !u!114 &1833427279
 MonoBehaviour:
   m_ObjectHideFlags: 0
