@@ -672,7 +672,7 @@ MonoBehaviour:
     much and you do not want them to be destroyed.
 
 
-    Press Space to continue.'
+    Click to continue.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1063,6 +1063,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6807786045718564470, guid: fbbcfbbc58983bd4b9881ee79fea5546, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6807786045718564472, guid: fbbcfbbc58983bd4b9881ee79fea5546, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6807786045718564473, guid: fbbcfbbc58983bd4b9881ee79fea5546, type: 3}
@@ -2034,7 +2038,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 796409956}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.65, z: -10}
+  m_LocalPosition: {x: -0.65, y: 0.65, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2054,7 +2058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cad80e4a6d3f0a4583745039c7546eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextStepKey: 32
+  nextStepKey: 323
   texts: {fileID: 2052311901}
 --- !u!1 &835001723
 GameObject:
@@ -2688,7 +2692,7 @@ MonoBehaviour:
     guide you through the UI and the commands.
 
 
-    Press Space to continue.'
+    Click to continue.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3160,7 +3164,7 @@ MonoBehaviour:
     be faster in fact).
 
 
-    Press Space to continue.'
+    Click to continue.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3298,8 +3302,8 @@ MonoBehaviour:
   m_text: 'Luckily, you have your favorite Anti-cat-Water-Gun with you !
 
 
-    Press
-    Space to continue.'
+    Click
+    to continue.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3526,8 +3530,7 @@ MonoBehaviour:
   m_text: 'Aim with your special cat-detecting red dot sight.
 
 
-    Press Space to
-    continue.'
+    Click to continue.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3972,7 +3975,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 28,012s
+  m_text: 62,721s
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4224,8 +4227,8 @@ MonoBehaviour:
     it depletes at each shot. You can refill your reserves by aiming at the bar !
 
 
-    Press
-    Space to continue.'
+    Click
+    to continue.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4507,7 +4510,7 @@ MonoBehaviour:
     !
 
 
-    Press Space to continue.'
+    Click to continue.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4856,7 +4859,7 @@ MonoBehaviour:
     Be careful !
 
 
-    Press Space to continue.'
+    Click to continue.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5339,7 +5342,7 @@ MonoBehaviour:
     ....
 
 
-    Press Space to return to the menu.'
+    Click to return to the menu.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
