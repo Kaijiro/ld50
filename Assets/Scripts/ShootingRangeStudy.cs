@@ -11,6 +11,8 @@ public class ShootingRangeStudy : MonoBehaviour
     public Slider shoot_loader;
     public TextMeshProUGUI hint_loader;
 
+    public TextMeshProUGUI ui_timer;
+
     public float loading_velocity = 1f;
 
     public GameObject reticle;
@@ -53,11 +55,7 @@ public class ShootingRangeStudy : MonoBehaviour
                     Destroy(hit.collider.gameObject);
                     StaticScore.CrossSceneInformation = hit.collider.gameObject.name;
                 }
-            } else
-            {
-                // TODO : add a UI prompt ?
-                Debug.Log("RELOAD");
-            }
+            } 
             
         }      
 
@@ -66,7 +64,6 @@ public class ShootingRangeStudy : MonoBehaviour
     private void FixedUpdate()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Debug.Log(mousePosition.y);
         if (mousePosition.y < -4.2f)
         {
             shoot_left = Mathf.Min(shoot_capacity, shoot_left + Time.deltaTime * loading_velocity);
@@ -74,6 +71,7 @@ public class ShootingRangeStudy : MonoBehaviour
 
         this.UpdateShootLoaderDisplay(shoot_left / shoot_capacity);
         StaticScore.CrossSceneTimer += Time.deltaTime;
+        ui_timer.SetText(StaticScore.CrossSceneTimer.ToString("#.000"));
     }
 
     private void UpdateShootLoaderDisplay(float shootLeftValue){
